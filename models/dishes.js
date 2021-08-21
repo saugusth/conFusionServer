@@ -12,11 +12,11 @@ const commentSchema = new Schema({
     },
     comment:{
         type: String,
-        ref: 'User'
+        required: true
     },
     author:{
         type: mongoose.Schema.Types.ObjectId,
-        required: true
+        ref: 'User'
     }
 },{
     timestamps: true
